@@ -72,8 +72,7 @@
                   <th scope="col">Name</th>
                   <th scope="col">Email</th>
                   <th scope="col">Role</th>
-                  <th scope="col"></th>
-                  <th scope="col"></th>
+                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -83,8 +82,10 @@
                   <td><%=emp.email%></td>
                   <td><%=emp.role%></td>
                   <%if (user.role === 'admin' || user.role === 'Admin'){%>
-                  <td><a href="/user/update/<%=emp.id%>">Edit</a></td>
-                  <td><a href="/user/delete/<%=emp.id%>">Delete</a></td>
+                  <td>
+                    <a href="/user/update/<%=emp.id%>">Edit</a>
+                    <a href="/user/delete/<%=emp.id%>">Delete</a>
+                  </td>
                   <%}%>
                 </tr>
                 

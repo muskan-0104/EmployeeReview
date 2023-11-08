@@ -106,7 +106,7 @@ module.exports.delete=async function(req,res){
 module.exports.updateView=async function(req,res){
     try{
         let user=await users.findById(req.params.id)
-    return res.render('employee_update',{title:'Update Employee',user:user});
+    return res.render('employee_update',{title:'Update Employee',employee:user});
 }catch(err){
     console.log("Error",err);
     return;
